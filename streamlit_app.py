@@ -74,13 +74,13 @@ def get_chapters(book_path, print_chapter_previews, first_chapter, last_chapter)
     return chapters
   
   
-  def get_embeddings(texts):
+def get_embeddings(texts):
     if type(texts) == str:
         texts = [texts]
     texts = [text.replace("\n", " ") for text in texts]
     return model.encode(texts)
   
-  def read_json(json_path):
+def read_json(json_path):
     print('Loading embeddings from "{}"'.format(json_path))
     with open(json_path, 'r') as f:
         values = json.load(f)
@@ -100,7 +100,7 @@ def read_epub(book_path, json_path, preview_mode, first_chapter, last_chapter):
         print('Failed to save embeddings to "{}"'.format(json_path))
     return (chapters, embeddings)
   
-  def process_file(path, preview_mode=False, first_chapter=0, last_chapter=math.inf):
+def process_file(path, preview_mode=False, first_chapter=0, last_chapter=math.inf):
     values = None
     if path[-4:] == 'json':
         values = read_json(path)
@@ -116,7 +116,7 @@ def read_epub(book_path, json_path, preview_mode, first_chapter, last_chapter):
   
   chapters, embeddings = process_file(path)
   
-  def print_and_write(text, f):
+def print_and_write(text, f):
     print(text)
     f.write(text + '\n')
 
