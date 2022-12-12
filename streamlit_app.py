@@ -150,4 +150,4 @@ query = st.text_input("Enter your query:")
 
 if st.button("Find"):
   st.write("Results:")
-  st.write(pd.DataFrame(results))
+  st.write(result_msg)
