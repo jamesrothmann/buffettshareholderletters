@@ -146,9 +146,9 @@ def search(query, embeddings, n=3):
 
 st.title("Search App")
 
-query2 = st.text_input("Enter your query:")
+query = st.text_input("Enter your query:")
 
 if st.button("Find"):
-  results2 = search(query2,embeddings)
+  results2 = search(query,embeddings)
   st.write("Results:")
   st.write(results2)
