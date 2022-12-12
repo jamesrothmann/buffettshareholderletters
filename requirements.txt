@@ -1,0 +1,7 @@
+beautifulsoup4
+ebooklib
+ipython
+numpy
+pandas
+sentence-transformers
+streamlit
