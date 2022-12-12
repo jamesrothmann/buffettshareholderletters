@@ -10,9 +10,17 @@ from IPython.display import HTML, display
 import numpy as np
 import math
 
-model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
+import urllib.request
 
-path = "https://drive.google.com/uc?export=download&id=1eSWaRvxHeqnnYW_0L13rkBMixnxk4fx9"
+url = "https://drive.google.com/uc?export=download&id=1eSWaRvxHeqnnYW_0L13rkBMixnxk4fx9"
+
+# Use urllib.request.urlretrieve to download the file from the given URL
+path = urllib.request.urlretrieve(url, "file.json")
+
+# The file should now be downloaded and saved to the server
+
+
+model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
 
 
 def part_to_chapter(part):
