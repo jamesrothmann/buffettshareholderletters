@@ -114,7 +114,7 @@ def process_file(path, preview_mode=False, first_chapter=0, last_chapter=math.in
         print('Invalid file format. Either upload an epub or a json of book embeddings.')        
     return values
   
-  chapters, embeddings = process_file(path)
+chapters, embeddings = process_file(path)
   
 def print_and_write(text, f):
     print(text)
