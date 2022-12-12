@@ -149,6 +149,5 @@ st.title("Search App")
 query = st.text_input("Enter your query:")
 
 if st.button("Find"):
-  results = search(query, embeddings)
   st.write("Results:")
   st.write(pd.DataFrame(results))
