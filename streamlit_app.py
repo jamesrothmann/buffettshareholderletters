@@ -151,4 +151,14 @@ query = st.text_input("Enter your query:")
 if st.button("Find"):
   results2 = search(query,embeddings)
   st.write("Results:")
-  st.write(results2)
+# Open the result.text file in read mode
+   f = open('result.text', 'r')
+
+# Read the contents of the file
+   file_content = f.read()
+
+# Close the file
+   f.close()
+
+# Use the st.text() method to display the contents of the file
+   st.text(file_content)
