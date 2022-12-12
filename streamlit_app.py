@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 import json
-import ebooklib
-from ebooklib import epub
 from bs4 import BeautifulSoup
 from os.path import exists
 from IPython.display import HTML, display
