@@ -17,7 +17,7 @@ url = "https://drive.google.com/uc?export=download&id=1eSWaRvxHeqnnYW_0L13rkBMix
 # Use urllib.request.urlretrieve to download the file from the given URL
 urllib.request.urlretrieve(url, "file.json")
 
-path = file.json
+path = "file.json"
 
 # The file should now be downloaded and saved to the server
 
