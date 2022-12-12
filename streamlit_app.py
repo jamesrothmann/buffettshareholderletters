@@ -14,15 +14,6 @@ model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
 
 path = "https://drive.google.com/uc?export=download&id=1eSWaRvxHeqnnYW_0L13rkBMixnxk4fx9"
 
-def set_css():
-  display(HTML('''
-  <style>
-    pre {
-        white-space: pre-wrap;
-    }
-  </style>
-  '''))
-get_ipython().events.register('pre_run_cell', set_css)
 
 def part_to_chapter(part):
     soup = BeautifulSoup(part.get_body_content(), 'html.parser')
