@@ -149,5 +149,8 @@ st.title("Search App")
 query = st.text_input("Enter your query:")
 
 if st.button("Find"):
+  for index in results:
+        para, title, para_no = index_to_para_chapter_index(index, chapters)
+        result_msg = '\nChapter: "{}", Passage number: {}, Score: {:.2f}\n"{}"'.format(title, para_no, scores[index], para)
   st.write("Results:")
-            st.write(result_msg)
+  st.write(result_msg)
