@@ -24,7 +24,7 @@ path = download_file()
 # The file should now be downloaded and saved to the server
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_model():
     model1 = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
     return model1
