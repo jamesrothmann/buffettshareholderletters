@@ -92,11 +92,11 @@ def search(query, embeddings, n=3):
     results = sorted([i for i in range(len(embeddings))], key=lambda i: scores[i], reverse=True)[:n]
 
     f = open('result.text', 'a')
-    header_msg ='Results for query "{}" in "the mind of Warren Buffett"'.format(query)
+    header_msg ='Results for query "{}"'.format(query)
     print_and_write(header_msg, f)
     for index in results:
         para, title, para_no = index_to_para_chapter_index(index, chapters)
-        result_msg = '\nChapter: "{}", Passage number: {}, Score: {:.2f}\n"{}"'.format(title, para_no, scores[index], para)
+        result_msg = '\n"{}"'.format(para)
         print_and_write(result_msg, f)
     print_and_write('\n', f)
 
