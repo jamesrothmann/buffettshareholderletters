@@ -1,6 +1,3 @@
-beautifulsoup4
-ipython
 numpy
-pandas
 sentence-transformers
 streamlit
