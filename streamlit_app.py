@@ -28,6 +28,8 @@ path = download_file()
 def load_model():
     model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
     return model
+
+model = load_model()
   
 def get_embeddings(texts):
     if type(texts) == str:
