@@ -106,8 +106,8 @@ st.title("Search App")
 query = st.text_input("Enter your query:")
 
 if st.button("Find"):
-   with open('result.text', 'w') as f:
-        f.truncate()
+  with open('result.text', 'w') as f:
+      f.truncate()
   results2 = search(query,embeddings)
   st.write("Results:")
 # Open the result.text file in read mode
