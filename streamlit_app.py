@@ -17,7 +17,10 @@ path = "file.json"
 # The file should now be downloaded and saved to the server
 
 
-model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
+@st.cache
+def load_model():
+    model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
+    return model
   
 def get_embeddings(texts):
     if type(texts) == str:
