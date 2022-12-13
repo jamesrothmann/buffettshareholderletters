@@ -26,8 +26,8 @@ path = download_file()
 
 @st.cache
 def load_model():
-    model = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
-    return model
+    model1 = SentenceTransformer('sentence-transformers/multi-qa-mpnet-base-dot-v1')
+    return model1
 
 model = load_model()
 
