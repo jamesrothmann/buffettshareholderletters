@@ -7,12 +7,19 @@ import math
 
 import urllib.request
 
-url = "https://drive.google.com/uc?export=download&id=1Ye0GUMOZhXDnlUoD-wW4rY2q-sDM5h7q"
+@st.cache
+def download_file():
+    url = "https://drive.google.com/uc?export=download&id=1Ye0GUMOZhXDnlUoD-wW4rY2q-sDM5h7q"
+    path = "file.json"
 
-# Use urllib.request.urlretrieve to download the file from the given URL
-urllib.request.urlretrieve(url, "file.json")
+    # Use urllib.request.urlretrieve to download the file from the given URL
+    urllib.request.urlretrieve(url, path)
 
-path = "file.json"
+    # Return the path to the downloaded file
+    return path
+
+# Download the file and get the path to the downloaded file
+path = download_file()
 
 # The file should now be downloaded and saved to the server
 
