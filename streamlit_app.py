@@ -92,7 +92,7 @@ def search(query, embeddings, n=3):
     results = sorted([i for i in range(len(embeddings))], key=lambda i: scores[i], reverse=True)[:n]
 
     f = open('result.text', 'a')
-    header_msg ='Results for query "{}" in "The Income Tax Act"'.format(query)
+    header_msg ='Results for query "{}" in "the mind of Warren Buffett"'.format(query)
     print_and_write(header_msg, f)
     for index in results:
         para, title, para_no = index_to_para_chapter_index(index, chapters)
@@ -106,6 +106,8 @@ st.title("Search App")
 query = st.text_input("Enter your query:")
 
 if st.button("Find"):
+   with open('result.text', 'w') as f:
+        f.truncate()
   results2 = search(query,embeddings)
   st.write("Results:")
 # Open the result.text file in read mode
