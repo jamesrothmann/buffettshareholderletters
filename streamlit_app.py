@@ -30,6 +30,8 @@ def load_model():
     return model
 
 model = load_model()
+
+model = model.clone()
   
 def get_embeddings(texts):
     if type(texts) == str:
