@@ -9,7 +9,7 @@ import urllib.request
 
 @st.cache
 def download_file():
-    url = "https://drive.google.com/uc?export=download&id=1Ye0GUMOZhXDnlUoD-wW4rY2q-sDM5h7q"
+    url = "https://drive.google.com/uc?export=download&id=1e_bneSaNGhY77Nt07RhTjcMekvwHRGjS"
     path = "file.json"
 
     # Use urllib.request.urlretrieve to download the file from the given URL
